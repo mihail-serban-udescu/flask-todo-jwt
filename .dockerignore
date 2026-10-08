@@ -1,0 +1,38 @@
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.so
+.Python
+build/
+dist/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# Git
+.git/
+.gitignore
+
+# Environment
+.env
+
+# Database
+*.db
+*.sqlite3
+instance/
+
+# Notes
+Notes.md
+notes.md
+*.md
+
+# Tests
+.pytest_cache/
+tests/
