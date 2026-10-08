@@ -1,0 +1,16 @@
+services:
+  web:
+    build: .
+    container_name: flask-todo-app
+    ports:
+      - "5000:5000"
+    environment:
+      - SECRET_KEY=${SECRET_KEY:-dev-secret}
+      - JWT_SECRET_KEY=${JWT_SECRET_KEY:-jwt-dev-secret}
+      - DATABASE_URL=sqlite:///todo.db
+    volumes:
+      - ./instance:/app/instance
+    restart: unless-stopped
+
+volumes:
+  db-data:
