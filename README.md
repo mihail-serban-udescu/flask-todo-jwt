@@ -1,5 +1,10 @@
 # ✅ To-Do REST API with JWT Authentication
 
+[![Tests](https://github.com/mihail-serban-udescu/flask-todo-jwt/actions/workflows/test.yml/badge.svg)](https://github.com/mihail-serban-udescu/flask-todo-jwt/actions/workflows/test.yml)
+[![Python](https://img.shields.io/badge/python-3.12-blue.svg)](https://www.python.org/downloads/)
+[![Docker](https://img.shields.io/badge/docker-ready-blue.svg)](https://www.docker.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 A RESTful API for managing personal tasks, built with Flask and secured with JWT authentication. Each user can only access their own tasks.
 
 ## ✨ Features
@@ -12,6 +17,9 @@ A RESTful API for managing personal tasks, built with Flask and secured with JWT
 - 📦 **SQLite database** with SQLAlchemy ORM
 - 🏗️ **Modular architecture** — Flask Blueprints + Application Factory
 - 🌍 **Environment-based config** with python-dotenv
+- 🐳 **Dockerized** — Dockerfile + docker-compose
+- ✅ **Tested** — 10 Pytest tests
+- 🔄 **CI/CD** — GitHub Actions workflow
 
 ## 🛠️ Tech Stack
 
@@ -22,6 +30,9 @@ A RESTful API for managing personal tasks, built with Flask and secured with JWT
 - **Flask-Bcrypt 1.0** — password hashing
 - **SQLite** — database (dev)
 - **python-dotenv** — config management
+- **Docker** — containerization
+- **Pytest** — testing
+- **GitHub Actions** — CI/CD
 
 ## 📦 Installation
 
@@ -48,6 +59,28 @@ cp .env.example .env       # Linux/Mac
 python run.py
 Server runs at http://localhost:5000
 
+🐳 Run with Docker
+bash
+# Build and run with Docker Compose
+docker compose up -d
+
+# View logs
+docker compose logs
+
+# Stop
+docker compose down
+Server runs at http://localhost:5000
+
+🧪 Run Tests
+bash
+# Install dev dependencies
+pip install -r requirements-dev.txt
+
+# Run tests
+pytest
+
+# Run with coverage
+pytest --cov=app --cov-report=term-missing
 🔌 API Endpoints
 🔓 Public (no auth required)
 Method	Endpoint	Description
@@ -121,9 +154,20 @@ flask-todo-jwt/
 │   └── tasks/
 │       ├── __init__.py
 │       └── routes.py         # CRUD for tasks
+├── tests/
+│   ├── __init__.py
+│   └── test_api.py           # 10 Pytest tests
+├── .github/
+│   └── workflows/
+│       └── test.yml          # GitHub Actions CI
 ├── config.py                 # Configuration class
 ├── run.py                    # Entry point
 ├── requirements.txt
+├── requirements-dev.txt
+├── pytest.ini
+├── Dockerfile
+├── docker-compose.yml
+├── .dockerignore
 ├── .env.example
 └── .gitignore
 🔐 Security Features
@@ -148,18 +192,13 @@ Code	Meaning
 404	Not Found (task doesn't exist)
 409	Conflict (email already registered)
 🎯 Roadmap
+☑ Docker support
+☑ GitHub Actions CI
+□ Deploy to Render/Railway
 □ Refresh tokens
 □ Password reset via email
 □ Task categories/tags
 □ Due dates and reminders
 □ Pagination for large task lists
-□ Docker support
-□ Deploy to Render/Railway
 📄 License
 MIT
-
-text
-
----
-
-## ✅ Salvează (Ctrl+S) → Înch
