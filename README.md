@@ -4,7 +4,12 @@
 [![Python](https://img.shields.io/badge/python-3.12-blue.svg)](https://www.python.org/downloads/)
 [![Docker](https://img.shields.io/badge/docker-ready-blue.svg)](https://www.docker.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen.svg)](https://flask-todo-jwt.onrender.com)
+## 🌐 Live Demo
 
+**URL:** [https://flask-todo-jwt.onrender.com](https://flask-todo-jwt.onrender.com)
+
+**Note:** Hosted on Render free tier — may take ~30 sec to wake up after 15 min of inactivity.
 A RESTful API for managing personal tasks, built with Flask and secured with JWT authentication. Each user can only access their own tasks.
 
 ## ✨ Features
